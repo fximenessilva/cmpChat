@@ -1,0 +1,32 @@
+{
+  "name": "cmpChat",
+  "version": "1.0.0",
+  "description": "Realtime chat app with rooms",
+  "main": "index.js",
+  "scripts": {
+    "start": "DEBUG=app nodemon index.js",
+    "debug": "node --inspect-brk index.js --runInBand",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fximenessilva/cmpChat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fximenessilva/cmpChat/issues"
+  },
+  "homepage": "https://github.com/fximenessilva/cmpChat#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "debug": "^4.3.1",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "socket.io": "^3.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
