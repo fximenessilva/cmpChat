@@ -6,7 +6,8 @@
   "scripts": {
     "start": "DEBUG=app nodemon index.js",
     "debug": "node --inspect-brk index.js --runInBand",
-    "dev": "nodemon index"
+    "dev": "nodemon index",
+    "test": "jest --collect-coverage --watchAll"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,11 @@
   },
   "homepage": "https://github.com/fximenessilva/cmpChat#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "chalk": "^4.1.0",
     "debug": "^4.3.1",
     "express": "^4.17.1",
+    "jest": "^26.6.3",
     "moment": "^2.29.1",
     "socket.io": "^3.1.1"
   },
