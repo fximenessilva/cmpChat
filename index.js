@@ -32,8 +32,10 @@ const botName = 'CMP Chat Bot';
 
 // Run when client connects
 io.on('connection', (socket) => {
-  socket.on('joinRoom', ({ username, room }) => {
-    const user = userJoin(socket.id, username, room);
+  socket.on('joinRoom', ({
+    username, room, email, contact, position,
+  }) => {
+    const user = userJoin(socket.id, username, room, email, contact, position);
 
     socket.join(user.room);
 
