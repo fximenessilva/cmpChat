@@ -10,16 +10,21 @@ const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
+const modalList = document.getElementById('user-modal');
 
 // Get username and room from URL
-const { username, room } = Qs.parse(location.search, {
+const {
+  username, room, email, contact, position,
+} = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
 const socket = io();
 
 // Join chatroom
-socket.emit('joinRoom', { username, room });
+socket.emit('joinRoom', {
+  username, room, email, contact, position,
+});
 
 // Get room and users
 socket.on('roomUsers', ({ room, users }) => {
@@ -29,7 +34,6 @@ socket.on('roomUsers', ({ room, users }) => {
 
 // Message from server
 socket.on('message', (message) => {
-  console.log(message);
   outputMessage(message);
 
   // Scroll down
@@ -81,21 +85,20 @@ function outputRoomName(room) {
 // Add users to DOM
 function outputUsers(users) {
   userList.innerHTML = '';
+  modalList.innerHTML = '';
+
   users.forEach((user) => {
     const li = document.createElement('li');
 
-    li.className = ('usr');
-
+    li.className = ('usr btn btn-primary');
+    li.setAttribute('type', 'button');
+    li.setAttribute('data-bs-toggle', 'modal');
+    li.setAttribute('data-bs-target', '#exampleModal');
     li.innerText = user.username;
     userList.appendChild(li);
+
+    const lii = document.createElement('li');
+    lii.innerText = user.email;
+    modalList.appendChild(lii);
   });
 }
-
-// Prompt the user before leave chat room
-document.getElementById('leave-btn').addEventListener('click', () => {
-  const leaveRoom = confirm('Are you sure you want to leave the chatroom?');
-  if (leaveRoom) {
-    window.location = '../index.html';
-  } else {
-  }
-});
