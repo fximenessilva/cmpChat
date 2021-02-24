@@ -4,8 +4,8 @@
 body {
 	background: linear-gradient(120deg, rgba(23, 190, 187, 1), rgba(240, 166, 202, 1));
 	background-color: turquoise !important;
-	overflow: hidden;
 	height: 100vh;
+
 	font-family: Helvetica, sans-serif;
 }
 
@@ -56,7 +56,7 @@ body {
     width: 65% !important;
     border-radius: 5px !important;
     margin: 2em 1em !important;
-    overflow: auto !important;
+    overflow-y: auto !important;
 }
 
 .chat-main{
@@ -102,17 +102,20 @@ ul {
 }
 
 #chat-form #msg{
-	width: 100%;
+
 	background: rgba(255, 255, 255, 0.03);
     position: absolute;
     bottom: 0;
     left: 10;
     border: none;
-    width: 75%;
+	width: 64.7%;
     padding: 1.2em;
     outline: none;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgb(255, 255, 255);
     font-weight: 300;
+	z-index: 10;
+	font-size: 12px !important;
+
 }
 
 
@@ -124,3 +127,113 @@ ul {
 	color: white;
 	opacity: 1; /* Firefox */
   }
+
+.messages-input-wrapper{
+	overflow-y: scroll;
+}
+
+.chat-messages {
+	overflow-y: scroll;
+	max-height: 520px;
+}
+
+.button{
+	text-decoration: none !important;
+	color: white;
+	padding: 10px 30px;
+	background-color: rgba(206, 206, 206, 0.16);
+	transition: 0.2s;
+	font-size: 14px;
+	border: none;
+	cursor: pointer;
+
+}
+
+.button:hover{
+	background-color: rgba(206, 206, 206, 0.4);
+	transition: 0.2s;
+	color: white !important;
+}
+
+.chat-header{
+	margin: 20px 0px 50px 10px;
+}
+
+.btn-primary{
+	background-color: transparent !important;
+	border: none !important
+}
+
+@media only screen and (max-width: 650px) {
+	
+
+}
+
+
+/* HOME PAGE */
+
+.form-wrapper, .form-control{
+	display: flex !important;
+	flex-direction: column !important;
+}
+
+.join-main{
+	display: flex;
+	flex-direction: column;
+	margin: 100px auto 0px;
+	padding: 20px;
+	box-shadow: 1px 1px 12px rgb(0 0 0 / 10%);
+	max-width: 400px;
+	justify-items: center;
+}
+
+.join-container{
+	margin-top: 40px;
+}
+
+
+.home-input, #room{
+	margin: 15px auto;
+	height: 3em;
+	background-color: rgba(255, 255, 255, 0.071);
+	border-radius: 2px;
+	border: none !important;
+	color: rgba(255, 255, 255, 0.7);
+	width: 70%;
+	padding-left: 10px;
+}
+
+*{
+	outline: none !important;
+}
+
+.home-input::placeholder{
+	color: rgba(255, 255, 255, 0.7);
+
+}
+
+.home-button{
+	text-decoration: none !important;
+	color: white;
+	padding: 10px 10px;
+	background-color: rgba(206, 206, 206, 0.16);
+	transition: 0.2s;
+	font-size: 14px;
+	border: none;
+	cursor: pointer;
+	width: 70%;
+	margin: 15px auto
+}
+
+.home-button:hover{
+	background-color: rgba(206, 206, 206, 0.4);
+	transition: 0.2s;
+	color: rgb(255, 255, 255) !important;
+}
+
+.home-title{
+	margin: 20px auto;
+	color: rgba(255, 255, 255, 0.379);
+	font-weight: 100;
+	letter-spacing: 0.2em;
+}

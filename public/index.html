@@ -17,14 +17,14 @@
 	</head>
 	<body>
 		<div class="join-container">
-			<header class="join-header">
-				<h1></i> Team CMP</h1>
-			</header>
+			
 			<main class="join-main">
-				<form action="chat.html">
+				<h1 class="home-title">cmpCord</h1>
+				<form action="chat.html" class="form-wrapper">
 					<div class="form-control">
-						<label for="username">Username</label>
+
 						<input
+							class="home-input"
 							type="text"
 							name="username"
 							id="username"
@@ -32,8 +32,9 @@
 							required
 						/>
 
-						<label class="home-label" for="email">Email</label>
+					
 						<input
+						class="home-input"
 							type="text"
 							name="email"
 							id="email"
@@ -41,8 +42,9 @@
 							required
 						/>
 
-						<label class="home-label" for="contact">Contact</label>
+				
 						<input
+						class="home-input"
 							type="text"
 							name="contact"
 							id="contact"
@@ -50,8 +52,9 @@
 							required
 						/>
 
-						<label class="home-label" for="position">Position</label>
+					
 						<input
+						class="home-input"
 							type="text"
 							name="position"
 							id="position"
@@ -60,8 +63,9 @@
 						/>
 					</div>
 					<div class="form-control">
-						<label for="room">Room</label>
+	
 						<select name="room" id="room">
+							<option value="" selected disabled hidden>Choose your room</option>
 							<option value="Virtual Reality">Virtual Reality</option>
 							<option value="Augmented Reality">Augmented Reality</option>
 							<option value="Post-Production">Post-Production</option>
@@ -70,7 +74,7 @@
 							<option value="HR">HR</option>
 						</select>
 					</div>
-					<button type="submit" class="button">Join Chat</button>
+					<button type="submit" class="home-button">Join Chat</button>
 				</form>
 			</main>
 		</div>
