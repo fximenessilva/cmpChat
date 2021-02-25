@@ -27,6 +27,7 @@ body {
     float: right !important;
     border-top-right-radius: 0.2em !important;
     border-bottom-right-radius: 0.2em !important;
+	overflow-y: auto;
 }
 
 #room-name{
@@ -37,6 +38,8 @@ body {
     margin: 0 !important;
     font-weight: 300 !important;
     text-align: center !important;
+	top: 0;
+	position: sticky;
 }
 
 .usr{
@@ -76,6 +79,11 @@ body {
 	text-transform: capitalize;
 }
 
+#users{
+height: 100%;
+overflow-y: scroll;
+}
+
 ul {
 	list-style-type: none;
   
@@ -113,8 +121,9 @@ ul {
     outline: none;
     color: rgb(255, 255, 255);
     font-weight: 300;
-	z-index: 10;
+
 	font-size: 12px !important;
+	/* margin-top: 500px; */
 
 }
 
@@ -134,7 +143,8 @@ ul {
 
 .chat-messages {
 	overflow-y: scroll;
-	max-height: 520px;
+	height: 88%;
+
 }
 
 .button{
@@ -165,7 +175,30 @@ ul {
 }
 
 @media only screen and (max-width: 650px) {
+	.chat-main{
+		display: grid;
+		grid-template-columns: none;
+		grid-template-rows: 30% 70%;
+		height: 100%;
+		
+	}
+	.chat-container{
+		max-width: 350px;
+		margin: 10px auto;
+	}
+
+	.usr{
+		padding: 2px !important;
+	}
+
+	#users{
+		display: flex;
+		flex-direction: column;
+		
 	
+	}
+
+
 
 }
 
@@ -180,7 +213,7 @@ ul {
 .join-main{
 	display: flex;
 	flex-direction: column;
-	margin: 100px auto 0px;
+	margin: 10px auto;
 	padding: 20px;
 	box-shadow: 1px 1px 12px rgb(0 0 0 / 10%);
 	max-width: 400px;
@@ -188,7 +221,11 @@ ul {
 }
 
 .join-container{
-	margin-top: 40px;
+	margin: 40px 0px;
+}
+
+#room{
+	width: 73% !important;
 }
 
 
@@ -215,13 +252,13 @@ ul {
 .home-button{
 	text-decoration: none !important;
 	color: white;
-	padding: 10px 10px;
+	padding: 10px 35px;
 	background-color: rgba(206, 206, 206, 0.16);
 	transition: 0.2s;
 	font-size: 14px;
 	border: none;
 	cursor: pointer;
-	width: 70%;
+	width: 72%;
 	margin: 15px auto
 }
 
@@ -237,3 +274,4 @@ ul {
 	font-weight: 100;
 	letter-spacing: 0.2em;
 }
+

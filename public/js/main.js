@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable no-empty */
 /* eslint-disable no-alert */
 /* eslint-disable consistent-return */
@@ -86,11 +87,15 @@ function outputRoomName(room) {
 function outputUsers(users) {
   userList.innerHTML = '';
   modalList.innerHTML = '';
-  console.log(users);
+  // console.log(users);
+
+  for (i = 0; i < users.length; i++) {
+    console.log(users[i]);
+  }
 
   users.forEach((user) => {
     const li = document.createElement('li');
-
+    // console.log(user);
     li.className = ('usr btn btn-primary userFromList');
     li.setAttribute('type', 'button');
     li.setAttribute('data-bs-toggle', 'modal');
