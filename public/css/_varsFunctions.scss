@@ -1,0 +1,40 @@
+$primaryWhite : white;
+$opacityWhite: rgba(255, 255, 255, 0.7);
+$transitionTime: 0.2s;
+
+@mixin bckgrndSize($bckgrnd, $width, $height) {
+    background: $bckgrnd;
+    width: $width;
+    height: $height;
+}
+
+@mixin fontMargin($fntW, $fntS, $margin, $width) {
+    font-weight: $fntW;
+    font-size: $fntS;
+    margin: $margin;
+    width: $width;
+}
+
+@mixin bckgrndClrBorder($bckgrndClr, $border){
+    background-color: $bckgrndClr;
+    border: $border;
+}
+
+@mixin grid($grid, $tmpltColumn, $tmpltRows) {
+    display: $grid;
+    grid-template-columns: $tmpltColumn;
+    grid-template-rows: $tmpltRows;
+}
+
+@mixin flex($flex, $flexDirection){
+    display: $flex;
+    flex-direction: $flexDirection;
+}
+
+@mixin position($position, $top, $right, $bottom, $left){
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}

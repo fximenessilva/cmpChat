@@ -1,0 +1,222 @@
+@import './varsFunctions';
+
+*{
+	outline: none !important;
+    text-decoration: none !important;
+	list-style-type: none;
+}
+
+body {
+    list-style-type: none;
+	background: linear-gradient(120deg, rgba(23, 190, 187, 1), rgba(240, 166, 202, 1));
+	height: 100vh;
+	font-family: Helvetica, sans-serif;
+}
+
+.chat-container{
+    @include bckgrndSize(rgba(255, 255, 255, 0.05) !important, 600px !important, 75% !important) ;
+	@include position(relative !important, none, none, none, none);
+    border-radius: 0.2em !important;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.15) !important;
+	margin: auto;
+}
+
+.chat-sidebar{
+    @include bckgrndSize(rgba(255, 255, 255, 0.1) !important, 100% !important, 100% !important) ;
+    float: right !important;
+    border-top-right-radius: 0.2em !important;
+    border-bottom-right-radius: 0.2em !important;
+	overflow-y: auto;
+}
+
+
+#room-name{
+    @include fontMargin(300 !important, 0.9em !important, 0 !important, default);
+	@include position(sticky, 0, none, none, none);
+	background: rgba(255, 255, 255, 0.05) !important;
+    color: $primaryWhite !important;
+    padding: 1em !important;
+    text-align: center !important;
+}
+
+.usr{
+    @include fontMargin(300 !important, 0.7em !important, -0.25em 2em !important, 200px !important);
+	float: left !important;
+    text-align: left !important;
+    color: $primaryWhite !important;
+}
+
+.message{
+	background: rgba(255, 255, 255, 0.2) !important;
+    padding: 1em 0 !important;
+    height: auto !important;
+    width: 65% !important;
+    border-radius: 5px !important;
+    margin: 2em 1em !important;
+    overflow-y: auto !important;
+}
+
+.chat-main{
+    @include grid(grid, 30% 70%, none);
+	height: 100%;
+}
+
+#users .userFromList {
+    @include fontMargin(300 !important, 0.8em !important, 5px !important, 200px !important);
+	float: left !important;
+    text-align: left !important;
+    color: $primaryWhite !important;
+	text-transform: capitalize;
+}
+
+#users{
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.meta{
+    @include fontMargin(300, 0.7em, 0em 2em, 200px);
+	float: left;
+    text-align: left;
+    color: $primaryWhite;
+  
+}
+
+.text{
+    @include fontMargin(300, 0.7em, 1em 2em 0.5em, 200px);
+	float: left;
+    text-align: left;
+    color: $primaryWhite;
+}
+
+#chat-form #msg{
+    @include fontMargin(300, 12px !important, 0, 64.7%);
+    @include bckgrndClrBorder(rgba(255, 255, 255, 0.03), none);
+	@include position(absolute, none, none, 0, 10);
+	float: left;
+    padding: 1.2em;
+    outline: none;
+    color: $primaryWhite;
+}
+
+#chat-form #msg:focus {
+	outline: 0;
+}
+
+#chat-form #msg::placeholder {
+	color: $primaryWhite;
+	opacity: 1;
+}
+
+.messages-input-wrapper{
+	overflow-y: scroll;
+}
+
+.chat-messages {
+	overflow-y: scroll;
+	height: 88%;
+}
+
+.button{
+    @include bckgrndClrBorder(rgba(206, 206, 206, 0.16), none );
+	text-decoration: none !important;
+	color: $primaryWhite;
+	padding: 10px 30px;
+	transition: $transitionTime;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.button:hover{
+	background-color: rgba(206, 206, 206, 0.4);
+	transition: $transitionTime;
+	color: $primaryWhite !important;
+}
+
+.chat-header{
+	margin: 20px 0px 50px 10px;
+}
+
+.btn-primary{
+    @include bckgrndClrBorder(transparent !important, none !important)
+}
+
+
+@media only screen and (max-width: 650px) {
+	.chat-main{
+        @include grid(grid, none, 30% 70%);
+		height: 100%;	
+	}
+	.chat-container{
+		max-width: 350px;
+		margin: 10px auto;
+	}
+
+	.usr{
+		padding: 2px !important;
+	}
+	
+	#users{
+        @include flex(flex, column);
+	}
+}
+
+/* HOME PAGE */
+
+.form-wrapper, .form-control{
+    @include flex(flex !important, column !important);
+}
+
+.join-main{
+    @include flex(flex, column);
+	margin: 10px auto;
+	padding: 20px;
+	box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.15);
+	max-width: 400px;
+	justify-items: center;
+}
+
+.join-container{
+	margin: 40px 0px;
+}
+
+#room{
+	width: 73% !important;
+}
+
+.home-input, #room{
+    @include bckgrndSize(rgba(255, 255, 255, 0.071), 70%, 3em);
+	margin: 15px auto;
+	border-radius: 2px;
+	border: none !important;
+	color: $opacityWhite;
+	padding-left: 10px;
+}
+
+.home-input::placeholder{
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.home-button{
+
+	color: $primaryWhite;
+    @include fontMargin(default,14px,15px auto, 72%  );
+	padding: 10px 35px;
+	background-color: rgba(206, 206, 206, 0.16);
+	transition: $transitionTime;
+	border: none;
+	cursor: pointer;
+}
+
+.home-button:hover{
+	background-color: rgba(206, 206, 206, 0.4);
+	transition: $transitionTime;
+	color: $primaryWhite !important;
+}
+
+.home-title{
+    @include fontMargin(100,default,20px auto, default );
+	color: rgba(255, 255, 255, 0.379);
+	letter-spacing: 0.2em;
+}
+
