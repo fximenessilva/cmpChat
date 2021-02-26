@@ -261,6 +261,10 @@ body {
   width: 73% !important;
 }
 
+option {
+  color: black;
+}
+
 .home-input, #room {
   background: rgba(255, 255, 255, 0.071);
   width: 70%;

@@ -182,7 +182,13 @@ body {
 
 #room{
 	width: 73% !important;
+
 }
+
+option { 
+	color: black
+}
+
 
 .home-input, #room{
     @include bckgrndSize(rgba(255, 255, 255, 0.071), 70%, 3em);

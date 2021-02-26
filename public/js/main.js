@@ -11,7 +11,7 @@ const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
-const modalList = document.getElementById('user-modal');
+// const modalList = document.getElementById('user-modal');
 
 // Get username and room from URL
 const {
@@ -86,7 +86,7 @@ function outputRoomName(room) {
 // Add users to DOM
 function outputUsers(users) {
   userList.innerHTML = '';
-  modalList.innerHTML = '';
+  // modalList.innerHTML = '';
   // console.log(users);
 
   for (i = 0; i < users.length; i++) {
@@ -103,8 +103,8 @@ function outputUsers(users) {
     li.innerText = user.username;
     userList.appendChild(li);
 
-    const lii = document.createElement('li');
-    lii.innerText = user.email;
-    modalList.appendChild(lii);
+    // const lii = document.createElement('li');
+    // lii.innerText = user.email;
+    // modalList.appendChild(lii);
   });
 }
