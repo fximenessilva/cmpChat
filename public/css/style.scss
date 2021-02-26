@@ -6,6 +6,10 @@
 	list-style-type: none;
 }
 
+::-webkit-scrollbar{
+	display: none;
+}
+
 body {
     list-style-type: none;
 	background: linear-gradient(120deg, rgba(23, 190, 187, 1), rgba(240, 166, 202, 1));

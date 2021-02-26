@@ -4,6 +4,10 @@
   list-style-type: none;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   list-style-type: none;
   background: linear-gradient(120deg, #17bebb, #f0a6ca);
