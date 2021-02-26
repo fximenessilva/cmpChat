@@ -2,6 +2,9 @@
   outline: none !important;
   text-decoration: none !important;
   list-style-type: none;
+  overflow: auto !important;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
 }
 
 ::-webkit-scrollbar {
@@ -179,7 +182,7 @@ body {
   border: none;
   text-decoration: none !important;
   color: white;
-  padding: 10px 30px;
+  padding: 15px 30px !important;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   font-size: 14px;
